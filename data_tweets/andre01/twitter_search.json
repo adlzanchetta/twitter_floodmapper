@@ -1,0 +1,26 @@
+{
+	"output_file_path": "D:\\andre\\twitter_now4.json",
+	"results_params":{
+		"results_per_call": 100,
+		"max_results": 50
+	},
+	"search_criteria": {
+        "keywords_in": ["flood", "flooded", "inundation", "inundated", "#tostorm", "#stormto"],
+        "keywords_out": ["mana"],
+        "hashtags_in": [],
+        "hashtags_out": [],
+        "users_out": [],
+        "time_interval_UTC": {
+            "from": "2013-07-08",
+            "to": "2013-07-09"
+        },
+        "area_circle": {
+            "center_lat_WGS": 0,
+            "center_lng_WGS": 0,
+            "radius_mi": 0
+        },
+        "area_place_a": ["Toronto", "Mississauga"],
+        "area_place": "Toronto"
+	},
+	"credentials_file_path": "D:\\andre\\academico_geral\\crowdsource_data_manipulation\\twitter_floodmapper\\tool_tweets_harvester\\credentials.txt"
+}
