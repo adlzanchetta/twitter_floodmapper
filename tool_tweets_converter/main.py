@@ -31,7 +31,7 @@ with open(all_twitts_json_fipa, "r") as r_file:
     all_data = json.load(r_file)
 
     twitts_geo, twitts_plain = [], []
-    clean_text = lambda s: re.sub('[^a-zA-Z0-9 \.]', '', str(s)).strip()
+    clean_text = lambda s: re.sub('[^a-zA-Z0-9\#\!\?\,\/ \.]', '', str(s)).strip()
     for cur_data in all_data:
 
         # read common attributes
@@ -88,5 +88,5 @@ else:
     print("Found %i plain twitts." % len(twitts_plain))
     with open(plain_twitts_csv_fipa, "w") as w_file:
         w_file.write("twitt_id; date; user_id; user_name; text\n")
-        [w_file.write("%s\n" % "; ".join(obj)) for obj in twitts_geo]
+        [w_file.write("%s\n" % "; ".join(obj)) for obj in twitts_plain]
     print(" Wrote: %s" % plain_twitts_csv_fipa)
